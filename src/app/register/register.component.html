@@ -1,0 +1,19 @@
+<div class="Form">
+  <div class="Register-1">
+    <div class="btn-close" id="btn-cancel" title="Close" (click)="CloseModal()">&times;</div>
+    <h2 class="Title-1">Register</h2>
+    <div id="Reg_Message" style="width: 100%; height: 10%; color: rgb(124, 252, 0)"></div>
+    <div class="container">
+      <span *ngFor="let item of FieldsFoms">
+        <label for="uname">{{item.Name}}:</label>
+        <input class="Input-1" type="{{item.Type}}" id="Reg_{{item.Field}}" placeholder="{{item.Name}}" required/>
+        <div class="Alert" id="{{item.Field}}_Message"></div>
+      </span>
+    </div>
+
+    <div class="container Reg-btns">
+      <div (click)="CloseModal()" class="btn btn-1" id="btn-Listar">Cancelar</div>
+      <div (click)="Guardar()" class="btn btn-1" id="btn-Guardar">Guardar</div>
+    </div>
+  </div>
+</div>
